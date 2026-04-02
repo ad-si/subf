@@ -1,6 +1,6 @@
 {
   "name": "subf",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Substitue all occurences of strings with their replacements. Substitution pairs are read from a file.",
   "type": "module",
   "main": "dist/index.js",
