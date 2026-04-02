@@ -2,10 +2,13 @@
   "name": "subf",
   "version": "1.0.0",
   "description": "Substitue all occurences of strings with their replacements. Substitution pairs are read from a file.",
-  "main": "index.js",
-  "bin": "cli.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": "dist/cli.js",
   "scripts": {
-    "test": "cli.js replacements.tsv example.txt"
+    "build": "tsc",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,16 @@
   ],
   "author": "Adrian Sieber",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "csv-parse": "^4.8.2",
-    "fs-extra": "^8.1.0"
+    "csv-parse": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "dprint": "^0.53.2",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
   }
 }
